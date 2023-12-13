@@ -1,0 +1,16 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}GRRRR{% endblock %}
+
+{% block body %}
+    <h1>Météo</h1>
+        <h2>{{ content.name }}</h2>
+    <ul>
+        <li>Latitute : {{ lat }}</li>
+        <li>Longitude: {{ lon }}</li>
+        <li>Temps : {{ content.weather[0].main }} <img src="https://openweathermap.org/img/wn/{{ content.weather[0].icon }}@2x.png"></li>
+        <li>Description du temps : {{ content.weather[0].description }}</li>
+        <li>Température : {{ content.main.temp }}</li>
+    </ul>
+{% endblock %}
+

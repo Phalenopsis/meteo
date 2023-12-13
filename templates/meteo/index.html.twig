@@ -1,0 +1,17 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Hello MeteoController!{% endblock %}
+
+{% block body %}
+<h1>Météo</h1>
+{#    <h2>{{ coord[0] }}, {{ coord[1] }}</h2>#}
+    {{ form_start(form) }}
+
+    {{ form_widget(form) }}
+
+    <button type="submit">Choose town</button>
+
+    {{ form_end(form) }}
+
+
+{% endblock %}
